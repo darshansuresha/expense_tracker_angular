@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-12 d-flex justify-content-center m-2">
+    <div class="col-lg-2 col-md-3 col-sm-12 m-2">
+      <button class="btn btn-sm btn-secondary" [routerLink]="['/dashboard']">
+        <span class="bi bi-arrow-left"></span>&nbsp;back to expense list
+      </button>
+    </div>
+    <div
+      class="col-lg-8 col-md-7 col-sm-12 offset-lg-2 col-md-1 justify-content-center m-2"
+    >
+      <h2>Add Expense</h2>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="col-lg-6 offset-lg-2 col-md-10 offset-md-1 col-sm-12">
+      <form>
+        <div class="mb-3">
+          <label for="categoryid" class="form-label">Select Category</label>
+          <select
+            id="categoryid"
+            name="categoryid"
+            [(ngModel)]="expenseObj.categoryid"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option [value]="0">Select Category</option>
+            <option *ngFor="let a of categoryData" [value]="a.name">
+              {{ a.name }}
+            </option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="txtPrice" class="form-label">Cost</label>
+          <input
+            id="txtPrice"
+            type="number"
+            name="cost"
+            class="form-control"
+            [(ngModel)]="expenseObj.cost"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="startDate">Date</label>
+          <input
+            id="startDate"
+            [(ngModel)]="expenseObj.date"
+            class="form-control"
+            type="date"
+            name="date"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="desc" class="form-label">Description</label>
+          <textarea
+            id="desc"
+            type="text"
+            name="description"
+            class="form-control"
+            [(ngModel)]="expenseObj.description"
+          ></textarea>
+        </div>
+        <div class="input-group mb-3">
+          <button
+            type="button"
+            (click)="addexpense()"
+            class="btn btn-lg w-100 fs-6 btn-secondary template-button-color"
+          >
+            add
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

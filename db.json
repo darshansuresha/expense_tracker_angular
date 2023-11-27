@@ -1,0 +1,164 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "user",
+      "password": "123456",
+      "email": "user@gmail.com"
+    },
+    {
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "name": "Rent",
+      "id": 1
+    },
+    {
+      "name": "EMI",
+      "id": 2
+    },
+    {
+      "name": "Grocery",
+      "id": 3
+    },
+    {
+      "name": "Entertainment",
+      "id": 4
+    },
+    {
+      "name": "Transportation",
+      "id": 5
+    },
+    {
+      "name": "Food",
+      "id": 6
+    }
+  ],
+  "expense_list": [
+    {
+      "userid": "2",
+      "categoryid": "Rent",
+      "cost": 867,
+      "date": "2023-11-23",
+      "description": "Home rent",
+      "id": 2
+    },
+    {
+      "userid": "2",
+      "categoryid": "EMI",
+      "cost": 1590,
+      "date": "2023-11-20",
+      "description": "TV EMI",
+      "id": 3
+    },
+    {
+      "userid": "1",
+      "categoryid": "Rent",
+      "cost": 565,
+      "date": "2023-11-29",
+      "description": "Home rent paid on banglore",
+      "id": 6
+    },
+    {
+      "userid": "2",
+      "categoryid": "Entertainment",
+      "cost": 58,
+      "date": "2023-11-28",
+      "description": "Movie tickets",
+      "id": 7
+    },
+    {
+      "userid": "1",
+      "id": 8,
+      "categoryid": "EMI",
+      "cost": 1600,
+      "date": "2023-11-15",
+      "description": "Mobile emi paid"
+    },
+    {
+      "userid": "1",
+      "id": 9,
+      "categoryid": "Transportation",
+      "cost": 500,
+      "date": "2023-11-21",
+      "description": "Bus and metro transportation"
+    },
+    {
+      "userid": "1",
+      "id": 10,
+      "categoryid": "Rent",
+      "cost": 41,
+      "date": "2023-11-22",
+      "description": "Rent paid"
+    },
+    {
+      "userid": "1",
+      "id": 11,
+      "categoryid": "Rent",
+      "cost": 45,
+      "date": "2023-11-22",
+      "description": "Rent paid"
+    },
+    {
+      "userid": "1",
+      "id": 12,
+      "categoryid": "EMI",
+      "cost": 456,
+      "date": "2023-11-21",
+      "description": "sdfsdf de"
+    },
+    {
+      "userid": "1",
+      "id": 13,
+      "categoryid": "EMI",
+      "cost": 500,
+      "date": "2023-11-21",
+      "description": "sdfsdf"
+    },
+    {
+      "userid": "2",
+      "id": 14,
+      "categoryid": "EMI",
+      "cost": 500,
+      "date": "2023-11-29",
+      "description": "dsfsdf"
+    },
+    {
+      "userid": "2",
+      "id": 15,
+      "categoryid": "EMI",
+      "cost": 5004,
+      "date": "2023-11-29",
+      "description": "sdfsfsdf sdf"
+    },
+    {
+      "userid": "2",
+      "id": 16,
+      "categoryid": "Rent",
+      "cost": 54,
+      "date": "2023-11-20",
+      "description": "dsds ewd"
+    },
+    {
+      "userid": "2",
+      "id": 17,
+      "categoryid": "Rent",
+      "cost": 540,
+      "date": "2023-11-20",
+      "description": "dfwf"
+    },
+    {
+      "userid": "2",
+      "categoryid": "EMI",
+      "cost": 4543,
+      "date": "2023-11-22",
+      "description": "frefe erfrefe",
+      "id": 18
+    }
+  ]
+}

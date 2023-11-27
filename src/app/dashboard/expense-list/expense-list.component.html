@@ -1,0 +1,72 @@
+<div class="row mb-4">
+  <div class="col-lg-4 offset-lg-1 col-md-4 offset-md-1 col-sm-10 offset-sm-1">
+    <label for="category" class="form-label">Select Category</label>
+    <select
+      id="category"
+      name="categoryid"
+      [(ngModel)]="categoryid"
+      class="form-select"
+      (ngModelChange)="changeCategory()"
+      aria-label="Default select example"
+    >
+      <option [value]="0">Select Category</option>
+      <option *ngFor="let a of categoryData" [value]="a.name">
+        {{ a.name }}
+      </option>
+    </select>
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-sm-10 offset-sm-1">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+          <b>Total Expenses: {{ total }}</b>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <!-- <th class="cursor-pointer" scope="col">
+        Id <i class="bi bi-arrows-vertical"></i>
+      </th> -->
+      <th class="cursor-pointer" scope="col" (click)="sort('categoryid')">
+        Expense type <i class="bi bi-arrows-vertical"></i>
+      </th>
+      <th class="cursor-pointer" scope="col" (click)="sort('cost')">
+        Cost <i class="bi bi-arrows-vertical"></i>
+      </th>
+      <th scope="col">Date</th>
+      <th scope="col">Description</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of expenseData | sortBy : key : reverse">
+      <!-- <th scope="row">{{ a.id }}</th> -->
+      <td>{{ a.categoryid }}</td>
+      <td>{{ a.cost }}</td>
+      <td>{{ a.date }}</td>
+      <td>{{ a.description }}</td>
+      <td>
+        <button
+          class="btn btn-success btn-sm rounded-pill"
+          (click)="dataupdatevent.emit(a)"
+        >
+          <i class="bi bi-pen"></i>
+        </button>
+        <button
+          type="button"
+          (click)="deleteitem(a.id)"
+          class="btn btn-danger btn-sm rounded-pill"
+          style="margin-left: 1rem"
+        >
+          <i class="bi bi-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

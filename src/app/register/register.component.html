@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div
+      class="row border rounded-5 p-3 bg-white shadow box-area navbar-light bg-light"
+    >
+      <div
+        class="col-12 d-flex justify-content-center align-items-center mb-2 flex-column"
+      >
+        <img
+          src="../../assets/images/logo.png"
+          alt="Avatar Logo"
+          style="width: 60px"
+          class="rounded-pill"
+        />
+        <h2>Expense Tracker</h2>
+      </div>
+
+      <hr />
+
+      <div
+        class="col-md-6 mt-3 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+      >
+        <div class="featured-image mb-3">
+          <img
+            src="../../assets/images/login-landing.svg"
+            class="img-fluid"
+            style="width: 100%"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-3 col-lg-4 offset-lg-1 right-box">
+        <div class="row">
+          <div class="header-text">
+            <h2>Hello,</h2>
+            <p>We are happy to have you.</p>
+          </div>
+          <form>
+            <div class="mb-3">
+              <label for="txtName" class="form-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                [(ngModel)]="registerObj.name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="txtName" class="form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                [(ngModel)]="registerObj.email"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="txtName" class="form-label">Password</label>
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                [(ngModel)]="registerObj.password"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <button
+                type="button"
+                (click)="register()"
+                class="btn btn-lg w-100 btn-secondary fs-6 template-button-color"
+              >
+                Register
+              </button>
+            </div>
+          </form>
+          <div class="row">
+            <small>Back to Login <a [routerLink]="['/login']">Login</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
